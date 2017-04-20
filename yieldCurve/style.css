@@ -1,0 +1,71 @@
+#graphArea ul {
+  /*position: absolute;*/
+  margin-bottom: 0;
+  position: fixed;
+  background: white;
+  z-index: 200;
+}
+#graphArea ul li {
+  /*height: 30px;*/
+  padding-top: 20px;
+}
+#dotArea {
+  position: absolute;
+  height: 406px;
+  width: 90%;
+  left: 100px;
+  top: 40px;
+  margin-top: 16px;
+  z-index: 100;
+  /* Background */
+  /* background: url('http://www.printablee.com/postpic/2014/06/free-printable-grid-graph-paper_175723.png'); */
+  background-position-x: -111px;
+  background-position-y: -82px;
+}
+#dotArea span {
+  height: 4px;
+  width: 4px;
+  position: absolute;
+  border-radius: 6px;
+}
+
+.bc3m {
+  background: blue;
+}
+
+.bc6m {
+  background: purple;
+}
+
+.bc1y {
+  background: darkred;
+}
+
+.bc3y {
+  background: #7aa1c2;
+}
+
+.bc10y {
+  background: darkgreen;
+}
+
+.bc30y {
+  background: darkgrey;
+}
+
+.selected {
+  padding: 3px;
+}
+
+#info {
+  position: fixed;
+  top: 8px;
+  left: 140px;
+}
+
+#info p {
+  color: white;
+  display: inline-block;
+  padding: 5px 10px;
+  margin: 0 10px;
+}
