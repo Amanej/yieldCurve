@@ -9,6 +9,7 @@ A simple application to view the yield curve for US Treasury bonds.
 Create backend that properly fetches, and stores treasury as I want them
 * * Data directory - created
 * * Database name - yieldCurve
+* * Switch strapi instead
 * Set up a frontend webpack project
 Create a good structure for the webpack project, with an understandable folder structure
 
@@ -16,6 +17,7 @@ Create a good structure for the webpack project, with an understandable folder s
 * Create a calculated yield
 * * (3 month - 30 year)
 * * (1 month - 10 year)
+* Add norwegian bank rates - 'https://data.norges-bank.no/api/data/IR/B.TBIL.3M.R'
 
 ### Chart
 * Label lines clearly
