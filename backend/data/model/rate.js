@@ -4,7 +4,11 @@ const Schema = mongoose.Schema;
 const ObjectId = Schema.ObjectId;
  
 const RateSchema = new Schema({
-  _id: ObjectId,
+  _id: {
+      type:ObjectId,
+      //index: true,
+      auto: true
+  },
   instrument: String,
   title: String,
   data: [{
