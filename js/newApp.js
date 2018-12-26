@@ -3336,7 +3336,7 @@ console.log(max300);
 highestYValues.push(max300);
 
 console.log(highestYValues);
-let highest = Math.max(...highestYValues);
+let highest = Math.max(...highestYValues)+0.5;
 console.log(highest);
 
 // Add graphs

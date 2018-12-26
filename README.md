@@ -7,6 +7,8 @@ A simple application to view the yield curve for US Treasury bonds.
 ### Setup
 * Set up a backend
 Create backend that properly fetches, and stores treasury as I want them
+* * Data directory - created
+* * Database name - yieldCurve
 * Set up a frontend webpack project
 Create a good structure for the webpack project, with an understandable folder structure
 
