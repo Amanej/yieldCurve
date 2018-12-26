@@ -11,6 +11,14 @@
 
 
 <body>
+  <div class="labels">
+    <span class="one_month">1 month</span>
+    <span class="three_month">3 month</span>
+    <span class="six_month">6 month</span>
+    <span class="one_year">1 year</span>
+    <span class="three_years">3 years</span>
+    <span class="thirty_years">30 years</span>
+  </div>
   <div id="yieldCurve">
 
   </div>
@@ -46,6 +54,45 @@
 
   path.one_year {
     stroke: #00ff4c;
+  }
+
+  path.three_year {
+    stroke: darkblue;
+  }
+
+  path.thirty_year {
+    stroke: #333;
+  }
+
+  div.labels {
+    text-align: center;
+  }
+  span {
+    padding: 5px;
+    color: white;
+  }
+  span.one_month {
+    background: orange;
+  }
+
+  span.three_month {
+    background: #a56e09;
+  }
+
+  span.six_month {
+    background: #abff00;
+  }
+
+  span.one_year {
+    background: #00ff4c;
+  }
+
+  span.three_years {
+    background: darkblue;
+  }
+
+  span.thirty_years {
+    background: #333;
   }
 
   .overlay {

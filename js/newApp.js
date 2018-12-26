@@ -3297,6 +3297,48 @@ const rawData = d3.json('../data/parsedData.json',function(err,data) {
 rawData;
 */
 
+function setUpWindow() {
+
+}
+
+function createGraphs() {
+
+}
+
+function createLines() {
+
+}
+
+// Find highest x value 
+let highestYValues = [];
+let max1 = Math.max.apply(Math, onemonth.map(function(o) { return o.value; }))
+console.log(max1);
+highestYValues.push(max1);
+
+let max3 = Math.max.apply(Math, threemonth.map(function(o) { return o.value; }))
+console.log(max3);
+highestYValues.push(max3);
+
+let max6 = Math.max.apply(Math, sixmonth.map(function(o) { return o.value; }))
+console.log(max6);
+highestYValues.push(max6);
+
+let max10 = Math.max.apply(Math, oneyear.map(function(o) { return o.value; }))
+console.log(max10);
+highestYValues.push(max10);
+
+let max30 = Math.max.apply(Math, threeyear.map(function(o) { return o.value; }))
+console.log(max30);
+highestYValues.push(max30);
+
+let max300 = Math.max.apply(Math, thirtyyear.map(function(o) { return o.value; }))
+console.log(max300);
+highestYValues.push(max300);
+
+console.log(highestYValues);
+let highest = Math.max(...highestYValues);
+console.log(highest);
+
 // Add graphs
 
 // 2. Use the margin convention practice 
@@ -3314,7 +3356,7 @@ var xScale = d3.scaleLinear()
 
 // 6. Y scale will use the randomly generate number 
 var yScale = d3.scaleLinear()
-    .domain([0, 1]) // input 
+    .domain([0, highest]) // input 
     .range([height, 0]); // output 
 
 // 7. d3's line generator
@@ -3326,14 +3368,14 @@ var line = d3.line()
 // 8. An array of objects of length N. Each object has key -> value pair, the key being "y" and the value is a random number
 var dataset = d3.range(n)
               .map((d,i) => { 
-                console.log("Point ",d);
+                //console.log("Point ",d);
                 return {
                   "y": onemonth[i].value // d3.randomUniform(1)() 
                 } 
               })
 let dataset_three = d3.range(n)
                     .map((d,i) => { 
-                      console.log("Point ",d);
+                      //console.log("Point ",d);
                       return {
                         "y": threemonth[i].value // d3.randomUniform(1)() 
                       } 
@@ -3341,7 +3383,7 @@ let dataset_three = d3.range(n)
 
 let dataset_six = d3.range(n)
                     .map((d,i) => { 
-                      console.log("Point ",d);
+                      //console.log("Point ",d);
                       return {
                         "y": sixmonth[i].value // d3.randomUniform(1)() 
                       } 
@@ -3349,7 +3391,7 @@ let dataset_six = d3.range(n)
 
 let dataset_oneyear = d3.range(n)
                     .map((d,i) => { 
-                      console.log("Point ",d);
+                      //console.log("Point ",d);
                       return {
                         "y": oneyear[i].value // d3.randomUniform(1)() 
                       } 
@@ -3357,7 +3399,7 @@ let dataset_oneyear = d3.range(n)
 
 let dataset_threeyear = d3.range(n)
                     .map((d,i) => { 
-                      console.log("Point ",d);
+                      //console.log("Point ",d);
                       return {
                         "y": threeyear[i].value // d3.randomUniform(1)() 
                       } 
@@ -3365,7 +3407,7 @@ let dataset_threeyear = d3.range(n)
                     
 let dataset_thirtyyear = d3.range(n)
                     .map((d,i) => { 
-                      console.log("Point ",d);
+                      //console.log("Point ",d);
                       return {
                         "y": thirtyyear[i].value // d3.randomUniform(1)() 
                       } 
@@ -3399,7 +3441,6 @@ svg.append("path")
     .attr("class", "line one_month")
     .attr("d", line); // 11. Calls the line generator 
 
-
 svg.append("path")
     .datum(dataset_three)
     .attr("class", "line three_month")
@@ -3416,10 +3457,14 @@ svg.append("path")
     .attr("d", line);    
 
 svg.append("path")
+    .datum(dataset_threeyear)
+    .attr("class", "line three_year")
+    .attr("d", line);      
+
+svg.append("path")
     .datum(dataset_thirtyyear)
     .attr("class", "line thirty_year")
     .attr("d", line);     
-
 
 // 12. Appends a circle for each datapoint 
 /*
