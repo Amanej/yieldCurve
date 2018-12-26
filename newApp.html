@@ -16,8 +16,54 @@
   </div>
 </body>
 
-
+<!--
 <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+-->
+
+<script src="https://d3js.org/d3.v5.min.js"></script>
 <script src="http://localhost:1413/newApp.js"></script>
+
+<style type="text/css">
+  /* 13. Basic Styling with CSS */
+  
+  /* Style the lines by removing the fill and applying a stroke */
+  .line {
+      fill: none;
+      stroke-width: 3;
+  }
+
+  path.one_month {
+    stroke: orange;
+  }
+
+  path.three_month {
+    stroke: #a56e09;
+  }
+
+  path.six_month {
+    stroke: #abff00;
+  }
+
+  path.one_year {
+    stroke: #00ff4c;
+  }
+
+  .overlay {
+    fill: none;
+    pointer-events: all;
+  }
+  
+  /* Style the dots by assigning a fill and stroke */
+  .dot {
+      fill: #ffab00;
+      stroke: #fff;
+  }
+    
+    .focus circle {
+    fill: none;
+    stroke: steelblue;
+  }
+  
+  </style>
 
 </html>
