@@ -61,4 +61,6 @@ function fetchRateByTitle() {
     })
 }
 
+// Cronjob 
+    // Fetch 2017 rate
 //fetchRateByTitle();
